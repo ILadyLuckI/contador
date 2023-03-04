@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Contador</title>
+</head>
+<body>
+
+    <div class="text">
+        <h1>CONTADOR</h1>
+    </div>
+
+    <div class="container">
+        <button id="menos">&laquo;</button>
+        <input type="number" min="-5" max="5" value="0" disabled id="contador">
+        <button id="mais">&raquo;</button>
+    </div>
+
+    <div id="rodape">
+        <p class="footer">Powered by Daiana Koblitz<br><a class="link" href="https://www.linkedin.com/in/daiana-koblitz/"> Linkedin | </a><a class="link" href="https://github.com/ILadyLuckI">GitHub </a></p>
+    </div>
+
+    <script>
+        const contador = document.querySelector('#contador');
+        const menos = document.querySelector('#menos');
+        const mais = document.querySelector('#mais');
+
+        let value = contador.value;
+
+        mais.addEventListener('click', ()=>{value = ++value;
+        contador.value = value;
+        });
+
+        menos.addEventListener('click', ()=>{value = value !== 0 ? -- value : -1;
+        contador.value = value;
+        });
+
+    </script>
+    
+</body>
+</html>
